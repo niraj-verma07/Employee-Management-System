@@ -12,10 +12,42 @@ const CreateTask = () => {
 
   const [newTask, setNewTask] = useState({});
 
+  // const submitHandler = (e) => {
+  //   e.preventDefault();
+
+  //   setNewTask({
+  //     taskTitle,
+  //     taskDescription,
+  //     taskDate,
+  //     category,
+  //     active: false,
+  //     newTask: true,
+  //     failed: false,
+  //     completed: false,
+  //   });
+
+  //   const data = userData;
+
+  //   data.forEach(function (elem) {
+  //     if (asignTo == elem.firstName) {
+  //       elem.tasks.push(newTask);
+  //       elem.taskCounts.newTask = elem.taskCounts.newTask + 1;
+  //     }
+  //   });
+  //   setUserData(data);
+  //   console.log(data);
+
+  //   setTaskTitle("");
+  //   setCategory("");
+  //   setAsignTo("");
+  //   setTaskDate("");
+  //   setTaskDescription("");
+  // };
+
   const submitHandler = (e) => {
     e.preventDefault();
 
-    setNewTask({
+    const task = {
       taskTitle,
       taskDescription,
       taskDate,
@@ -24,19 +56,27 @@ const CreateTask = () => {
       newTask: true,
       failed: false,
       completed: false,
-    });
+    };
 
-    const data = userData;
-
-    data.forEach(function (elem) {
-      if (asignTo == elem.firstName) {
-        elem.tasks.push(newTask);
-        elem.taskCounts.newTask = elem.taskCounts.newTask + 1;
+    // Create a NEW array for React
+    const updatedUsers = userData.map((user) => {
+      if (user.firstName === asignTo) {
+        return {
+          ...user,
+          tasks: [...user.tasks, task],
+          taskCounts: {
+            ...user.taskCounts,
+            newTask: user.taskCounts.newTask + 1,
+          },
+        };
       }
+      return user;
     });
-    setUserData(data);
-    console.log(data);
 
+    setUserData(updatedUsers);
+    console.log(updatedUsers);
+
+    // Reset form
     setTaskTitle("");
     setCategory("");
     setAsignTo("");
