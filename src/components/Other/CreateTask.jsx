@@ -60,7 +60,7 @@ const CreateTask = () => {
               onChange={(e) => {
                 setTaskTitle(e.target.value);
               }}
-              className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4"
+              className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border border-gray-400 mb-4"
               type="text"
               placeholder="Make a UI design"
             />
@@ -72,7 +72,7 @@ const CreateTask = () => {
               onChange={(e) => {
                 setTaskDate(e.target.value);
               }}
-              className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4"
+              className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border border-gray-400 mb-4"
               type="date"
             />
           </div>
@@ -83,7 +83,7 @@ const CreateTask = () => {
               onChange={(e) => {
                 setAsignTo(e.target.value);
               }}
-              className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4"
+              className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border border-gray-400 mb-4"
               type="text"
               placeholder="employee name"
             />
@@ -95,7 +95,7 @@ const CreateTask = () => {
               onChange={(e) => {
                 setCategory(e.target.value);
               }}
-              className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4"
+              className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border border-gray-400 mb-4"
               type="text"
               placeholder="design, dev, etc"
             />
@@ -109,7 +109,7 @@ const CreateTask = () => {
             onChange={(e) => {
               setTaskDescription(e.target.value);
             }}
-            className="w-full h-44 text-sm py-2 px-4 rounded outline-none bg-transparent border-[1px] border-gray-400"
+            className="w-full h-44 text-sm py-2 px-4 rounded outline-none bg-transparent border border-gray-400"
             name=""
             id=""
           ></textarea>
