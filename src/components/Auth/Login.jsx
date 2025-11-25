@@ -13,7 +13,7 @@ const Login = ({ handleLogin }) => {
 
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      <div className="border-2 rounded-xl border-emerald-600 p-20">
+      <div className="border-2 rounded-xl border-blue-600 p-20">
         <form
           onSubmit={(e) => {
             submitHandler(e);
@@ -26,7 +26,7 @@ const Login = ({ handleLogin }) => {
               setEmail(e.target.value);
             }}
             required
-            className="outline-none bg-transparent border-2 border-emerald-600 font-medium text-lg py-2 px-6 rounded-full placeholder:text-gray-400"
+            className="outline-none bg-transparent border-2 border-blue-600 font-medium text-lg py-2 px-6 rounded-full placeholder:text-gray-400"
             type="email"
             placeholder="Enter your email"
           />
@@ -36,11 +36,11 @@ const Login = ({ handleLogin }) => {
               setPassword(e.target.value);
             }}
             required
-            className="outline-none bg-transparent border-2 border-emerald-600 font-medium text-lg py-2 px-6 rounded-full mt-3 placeholder:text-gray-400"
+            className="outline-none bg-transparent border-2 border-blue-600 font-medium text-lg py-2 px-6 rounded-full mt-3 placeholder:text-gray-400"
             type="password"
             placeholder="Enter password"
           />
-          <button className="mt-7 text-white border-none outline-none hover:bg-emerald-700 font-semibold bg-emerald-600 text-lg py-2 px-8 w-full rounded-full placeholder:text-white">
+          <button className="mt-7 text-white border-none outline-none hover:bg-blue-700 font-semibold bg-blue-600 text-lg py-2 px-8 w-full rounded-full placeholder:text-white cursor-pointer">
             Log in
           </button>
         </form>
